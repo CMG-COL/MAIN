@@ -1,5 +1,7 @@
-/* Service Worker: Cache-first, damit das Spiel offline und als installierte PWA läuft. */
-const CACHE = 'turbosiesta-v1';
+/* Service Worker: stale-while-revalidate — sofortiger Start aus dem Cache,
+   im Hintergrund wird die nächste Version nachgeladen (Fix: installierte PWAs
+   bekamen mit reinem Cache-first nie Updates). */
+const CACHE = 'turbosiesta-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -25,13 +27,16 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
   e.respondWith(
-    caches.match(e.request, { ignoreSearch: true }).then((hit) => {
-      if (hit) return hit;
-      return fetch(e.request).then((res) => {
-        const copy = res.clone();
-        caches.open(CACHE).then((c) => c.put(e.request, copy));
-        return res;
-      });
-    })
+    caches.open(CACHE).then((cache) =>
+      cache.match(e.request, { ignoreSearch: true }).then((hit) => {
+        const refresh = fetch(e.request)
+          .then((res) => {
+            if (res && res.ok) cache.put(e.request, res.clone());
+            return res;
+          })
+          .catch(() => hit);
+        return hit || refresh;
+      })
+    )
   );
 });

@@ -282,7 +282,9 @@ const Snd = {
       this.sirenOsc.start();
     } catch (e) { /* Audio optional */ }
   },
-  resume() { if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume(); },
+  // iOS setzt den Context nach Anruf/Siri/Backgrounding auf 'interrupted' —
+  // deshalb bei allem außer 'running' resumen, nicht nur bei 'suspended'.
+  resume() { if (this.ctx && this.ctx.state !== 'running' && this.ctx.resume) this.ctx.resume().catch(() => {}); },
   setMuted(m) { this.muted = m; if (this.master) this.master.gain.value = m ? 0 : 0.8; },
   engineAt(ratio, on) {
     if (!this.ctx) return;
@@ -1420,6 +1422,8 @@ function drawGarage() {
     ctx.fillText(maxed ? 'MAX' : fmt$(cost), VW / 2 + w / 2 - 54, y + 31);
     if (canBuy) {
       addHit(VW / 2 + w / 2 - 100, y + 8, 92, 46, () => {
+        // Re-Check: mehrere Taps im selben Frame dürfen nicht doppelt kaufen
+        if (save.upg[u.id] >= 5 || save.cash < cost) return;
         save.cash -= cost; save.upg[u.id]++; Snd.sfx('buy'); persist();
       });
     }
@@ -1438,7 +1442,13 @@ function togglePause() {
   else if (game.state === 'pause') game.state = 'play';
 }
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden && game.state === 'play') { game.state = 'pause'; persist(); }
+  if (document.hidden) {
+    if (game.state === 'play') game.state = 'pause';
+    Snd.engineAt(0, false); Snd.sirenAt(false, 0);
+    persist();
+  } else {
+    Snd.resume();
+  }
 });
 
 /* --------------------------------- Boot ---------------------------------- */
