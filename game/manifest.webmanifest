@@ -1,0 +1,17 @@
+{
+  "name": "Turbo Siesta",
+  "short_name": "Turbo Siesta",
+  "description": "Top-Down-Fahrspiel in Solara Bay: liefern, driften, Sterne sammeln – dein Fahndungslevel ist dein Score-Multiplikator.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#2b1a45",
+  "theme_color": "#2b1a45",
+  "icons": [
+    { "src": "icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
