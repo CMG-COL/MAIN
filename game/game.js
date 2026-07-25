@@ -358,7 +358,8 @@ function tapUI(x, y) {
 }
 
 cvs.addEventListener('touchstart', (e) => {
-  e.preventDefault(); isTouchDevice = true;
+  if (e.cancelable) e.preventDefault();
+  isTouchDevice = true;
   Snd.init(); Snd.resume();
   for (const t of e.changedTouches) {
     const x = t.clientX, y = t.clientY;
@@ -371,13 +372,13 @@ cvs.addEventListener('touchstart', (e) => {
   }
 }, { passive: false });
 cvs.addEventListener('touchmove', (e) => {
-  e.preventDefault();
+  if (e.cancelable) e.preventDefault();
   for (const t of e.changedTouches) {
     if (t.identifier === touches.stick) stick.dx = clamp((t.clientX - stick.bx) / 48, -1, 1);
   }
 }, { passive: false });
 function endTouch(e) {
-  e.preventDefault();
+  if (e.cancelable) e.preventDefault();
   for (const t of e.changedTouches) {
     if (t.identifier === touches.stick) { touches.stick = null; stick.active = false; stick.dx = 0; }
     if (t.identifier === touches.gas) { touches.gas = null; input.gas = false; }
@@ -1144,7 +1145,8 @@ function drawHUD() {
   if (target && game.state === 'play') {
     const a = angTo(player.x, player.y, target.x, target.y);
     const scr = 58;
-    const ax = VW / 2 + Math.cos(a) * scr, ay = VH / 2 + Math.sin(a) * scr;
+    const psx = (player.x - cam.x) * SCALE + VW / 2, psy = (player.y - cam.y) * SCALE + VH / 2;
+    const ax = psx + Math.cos(a) * scr, ay = psy + Math.sin(a) * scr;
     ctx.save(); ctx.translate(ax, ay); ctx.rotate(a);
     ctx.fillStyle = activeMission ? activeMission.type.color : (target.type ? target.type.color : PAL.accent);
     ctx.beginPath(); ctx.moveTo(10, 0); ctx.lineTo(-6, -7); ctx.lineTo(-2, 0); ctx.lineTo(-6, 7); ctx.closePath(); ctx.fill();
