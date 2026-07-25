@@ -40,11 +40,12 @@ App-Store-Release: siehe [`docs/IOS-APP-STORE.md`](docs/IOS-APP-STORE.md).
 
 | Pfad | Inhalt |
 |---|---|
-| `game/` | Das komplette Spiel (5 Dateien + Icons, keine Dependencies) |
+| `game/` | Das komplette Web-Spiel (5 Dateien + Icons, keine Dependencies) |
+| `roblox/` | **Roblox-Portierung**: fertige Place-Datei + Luau-Quellen + Publish-Anleitung |
 | `docs/GDD.md` | Game Design Document |
-| `docs/BERICHT-PHASE-*.md` | Projektberichte: Konzeption, Entwicklung, Vermarktung |
+| `docs/BERICHT-PHASE-*.md` | Projektberichte: Konzeption, Entwicklung, Web-Marketing, Roblox |
 | `docs/IOS-APP-STORE.md` | Capacitor-Anleitung für den App-Store-Release |
-| `marketing/` | ASO-Listing, Presse-Kit, 4-Wochen-Launch-Plan (Budget: 0 €) |
+| `marketing/` | ASO-Listing, Presse-Kit, Launch-Plan, Roblox-Marketing + Assets (Budget: 0 €) |
 
 ## Rechtliches / Stil-Abgrenzung
 
