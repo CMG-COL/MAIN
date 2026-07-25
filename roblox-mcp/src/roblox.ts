@@ -88,6 +88,36 @@ export function post<T>(url: string, body: unknown): Promise<T> {
   return request<T>(url, { method: "POST", body: JSON.stringify(body) });
 }
 
+// ---------------------------------------------------------------------------
+// Open Cloud v2 (requires an API key from create.roblox.com/dashboard/credentials)
+// ---------------------------------------------------------------------------
+
+const OPEN_CLOUD_BASE = "https://apis.roblox.com/cloud/v2";
+
+function apiKey(): string {
+  const key = process.env.ROBLOX_API_KEY;
+  if (!key) {
+    throw new RobloxApiError(
+      "ROBLOX_API_KEY is not set. Open Cloud tools need an API key — create one at https://create.roblox.com/dashboard/credentials and export it as ROBLOX_API_KEY in the MCP server config.",
+    );
+  }
+  return key;
+}
+
+export function cloudGet<T>(path: string): Promise<T> {
+  return request<T>(`${OPEN_CLOUD_BASE}${path}`, {
+    headers: { "x-api-key": apiKey() },
+  });
+}
+
+export function cloudPost<T>(path: string, body: unknown): Promise<T> {
+  return request<T>(`${OPEN_CLOUD_BASE}${path}`, {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: { "x-api-key": apiKey() },
+  });
+}
+
 /** Resolve a placeId (from a roblox.com/games/<placeId>/... URL) to its universeId. */
 export async function placeToUniverse(placeId: number): Promise<number> {
   const data = await get<{ universeId: number }>(

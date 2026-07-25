@@ -8,7 +8,14 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
-import { get, post, placeToUniverse, RobloxApiError } from "./roblox.js";
+import {
+  get,
+  post,
+  cloudGet,
+  cloudPost,
+  placeToUniverse,
+  RobloxApiError,
+} from "./roblox.js";
 
 const server = new McpServer({
   name: "roblox",
@@ -320,6 +327,98 @@ server.registerTool(
       get(
         `https://catalog.roblox.com/v1/search/items/details?Keyword=${encodeURIComponent(keyword)}&Limit=${limit}`,
       ),
+    ),
+);
+
+// ---------------------------------------------------------------------------
+// Open Cloud v2 (optional — requires ROBLOX_API_KEY env var)
+//
+// Docs: https://create.roblox.com/docs/cloud
+// Create keys at https://create.roblox.com/dashboard/credentials and grant
+// the scopes noted per tool below.
+// ---------------------------------------------------------------------------
+
+server.registerTool(
+  "opencloud_get_universe",
+  {
+    title: "Open Cloud: get universe",
+    description:
+      "Fetch a universe (experience) you own/manage via Open Cloud v2: display name, description, visibility, age rating, social links. Requires ROBLOX_API_KEY with 'universe:read' scope.",
+    inputSchema: { universeId: z.number().int().positive().describe("Universe ID") },
+  },
+  async ({ universeId }) => run(() => cloudGet(`/universes/${universeId}`)),
+);
+
+server.registerTool(
+  "opencloud_get_place",
+  {
+    title: "Open Cloud: get place",
+    description:
+      "Fetch a place within a universe you own/manage via Open Cloud v2 (name, description, server size). Requires ROBLOX_API_KEY with 'universe.place:read' scope.",
+    inputSchema: {
+      universeId: z.number().int().positive().describe("Universe ID"),
+      placeId: z.number().int().positive().describe("Place ID"),
+    },
+  },
+  async ({ universeId, placeId }) =>
+    run(() => cloudGet(`/universes/${universeId}/places/${placeId}`)),
+);
+
+server.registerTool(
+  "opencloud_list_data_stores",
+  {
+    title: "Open Cloud: list data stores",
+    description:
+      "List standard data stores in a universe via Open Cloud v2. Requires ROBLOX_API_KEY with data store read scope (universe-datastores.control:list).",
+    inputSchema: {
+      universeId: z.number().int().positive().describe("Universe ID"),
+      maxPageSize: z.number().int().min(1).max(100).default(25).describe("Results per page"),
+      pageToken: z.string().optional().describe("Page token from a previous response"),
+    },
+  },
+  async ({ universeId, maxPageSize, pageToken }) =>
+    run(() =>
+      cloudGet(
+        `/universes/${universeId}/data-stores?maxPageSize=${maxPageSize}${pageToken ? `&pageToken=${encodeURIComponent(pageToken)}` : ""}`,
+      ),
+    ),
+);
+
+server.registerTool(
+  "opencloud_get_data_store_entry",
+  {
+    title: "Open Cloud: get data store entry",
+    description:
+      "Read a single entry from a standard data store via Open Cloud v2 (returns value, revision id, users, attributes). Requires ROBLOX_API_KEY with 'universe-datastores.objects:read' scope.",
+    inputSchema: {
+      universeId: z.number().int().positive().describe("Universe ID"),
+      dataStore: z.string().min(1).describe("Data store name"),
+      entryId: z.string().min(1).describe("Entry key"),
+    },
+  },
+  async ({ universeId, dataStore, entryId }) =>
+    run(() =>
+      cloudGet(
+        `/universes/${universeId}/data-stores/${encodeURIComponent(dataStore)}/entries/${encodeURIComponent(entryId)}`,
+      ),
+    ),
+);
+
+server.registerTool(
+  "opencloud_publish_message",
+  {
+    title: "Open Cloud: publish message",
+    description:
+      "Publish a message to a topic in a live experience via Open Cloud v2 MessagingService — running game servers subscribed to the topic receive it. Requires ROBLOX_API_KEY with 'universe-messaging-service:publish' scope.",
+    inputSchema: {
+      universeId: z.number().int().positive().describe("Universe ID"),
+      topic: z.string().min(1).max(80).describe("Topic name (as used with MessagingService:SubscribeAsync)"),
+      message: z.string().min(1).describe("Message payload (string)"),
+    },
+  },
+  async ({ universeId, topic, message }) =>
+    run(() =>
+      cloudPost(`/universes/${universeId}:publishMessage`, { topic, message }),
     ),
 );
 
