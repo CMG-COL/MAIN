@@ -17,6 +17,34 @@ P Vorrang vor M und G (Begründung in `BUSINESS-CASE.md` Abschnitt 3).
 | 5 | M | **Kosmetik-Pass „Lackierungen"** (49–99 R$) via ShopKit einbauen | Zahlerquote in % | blockiert bis Haltequoten ok |
 | 6 | P | **Zivilverkehr + Feder-Stoßstange** (Parität zur Web-Fassung) | Session-Zeit ↑ | offen |
 | 7 | G | **3 Clips drehen** (Musterbürger-Trick, Knöllchen, Alphorn-Hupe) | Klicks auf Spiel-Link | offen |
+| 8 | P | **Radio Solara mit eigener CMG-Musik** — 3–4 Instrumental-Loops, Sender-Umschalter im Auto, Mute-Knopf, Credits mit Link | Session-Zeit ↑ | wartet auf Tracks vom CEO |
+
+### Zug 8 im Detail — Radio Solara
+
+**Warum:** Musik ist in Fahrspielen einer der stärksten Verweilgründe, und
+Session-Zeit ist der wichtigste Ranking-Treiber. Eigene CMG-Musik kostet nichts,
+gehört uns und ist nicht kopierbar. „Radio Solara" existiert bereits als
+Satire-Ticker in der Fiktion.
+
+**Was der CEO liefert:** 3–4 Instrumental-Loops, je 60–120 Sekunden, nahtlos
+loopbar, Sunset-Pop-Ton (warmer Synthwave mit Latin-Einschlag). Als MP3 oder OGG,
+≤ 48 kHz, Stereo, nicht übersteuert.
+
+**Rechte-Voraussetzung (hart):** Roblox verlangt, dass alle Rechte beim
+Hochladenden liegen — Master und Verlag. Keine Samples, keine Features, nichts,
+was über einen Distributor exklusiv gebunden ist. Uploads werden gescannt.
+
+**Plattform-Rahmen:** Upload kostenlos, 100 Assets/30 Tage (2.000 bei
+ID-Verifizierung), max. 20 MB und 7 Minuten je Datei. Neue Uploads sind privat —
+die Experience muss explizit freigegeben werden.
+
+**Umsetzung:** Sender-Umschalter im Auto, Mute-Knopf (Pflicht — nicht
+abschaltbare Musik kostet Likes), Credits im HUD mit Link in der
+Store-Beschreibung. In der Web-Fassung dieselben Loops, komprimiert, damit die
+Ladezeit unter einer Sekunde bleibt.
+
+**Nebeneffekt Marketing:** Cross-Promotion in beide Richtungen — das Spiel
+bewirbt die Musik, die Musikkanäle bewerben das Spiel.
 
 ## Bewertet, aber noch nicht eingeplant
 
