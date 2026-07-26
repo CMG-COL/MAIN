@@ -30,9 +30,23 @@ Satire-Ticker in der Fiktion.
 loopbar, Sunset-Pop-Ton (warmer Synthwave mit Latin-Einschlag). Als MP3 oder OGG,
 ≤ 48 kHz, Stereo, nicht übersteuert.
 
-**Rechte-Voraussetzung (hart):** Roblox verlangt, dass alle Rechte beim
-Hochladenden liegen — Master und Verlag. Keine Samples, keine Features, nichts,
-was über einen Distributor exklusiv gebunden ist. Uploads werden gescannt.
+**Rechte-Realität (wichtig, korrigiert):** Roblox prüft mit **Audible Magic**
+(Audio-Fingerprinting) gegen eine Datenbank veröffentlichter Musik. Ein Track,
+der über einen Distributor bei Streaming-Diensten liegt, ist dort erfasst — der
+Scanner schlägt an und **erkennt nicht, dass der Uploader der Rechteinhaber ist.**
+
+Es gibt **keinen Weg, Eigentum nachzuweisen.** Entwickler fordern diese Funktion
+seit Jahren, sie existiert nicht; nur ein allgemeiner Einspruch über „Violations
+& Appeals", langsam und ohne Garantie. Wiederholte IP-Treffer zählen als
+Verstöße gegen den Account, nicht nur gegen die Datei — das Spiel selbst steht
+damit im Risiko. Selbst Musik ohne jede Online-Präsenz wird laut Forenberichten
+falsch positiv getroffen.
+
+**Konsequenz — Zwei-Kanal-Regel:**
+- **Roblox:** ausschließlich neu produzierte Instrumentals, die **nie** bei einem
+  Distributor waren und es auch später nicht werden. Kein Fingerprint, kein Treffer.
+- **Web/PWA:** dort gibt es keinen Scanner (eigenes Hosting) — hier kann der
+  bestehende CMG-Katalog laufen und als Schaufenster für die Musik dienen.
 
 **Plattform-Rahmen:** Upload kostenlos, 100 Assets/30 Tage (2.000 bei
 ID-Verifizierung), max. 20 MB und 7 Minuten je Datei. Neue Uploads sind privat —
