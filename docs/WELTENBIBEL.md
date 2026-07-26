@@ -98,7 +98,9 @@ aussieht und so klingt.
 
 ## Offene Entscheidungen (CEO)
 
-1. **Der Künstler**: Name, Identität, Verhältnis zu bestehenden CMG-Acts
+1. **Die Künstlerin**: Der Name steht faktisch — **SIESTA** (aus dem Material).
+   Offen bleiben Gesicht, Stimme und Verhältnis zu bestehenden CMG-Acts.
+   Ebenfalls zu klären: Rolle von TANGO und THE SUIT in der Welt.
 2. **GEMA-Verzicht** für die Spiel-Tracks (Bedingung für den DistroKid-Roblox-Weg)
 3. **Weitere Plattform** neben Roblox — ja, welche, wann
 4. **Budget und Zeithorizont** (steht seit Projektbeginn offen)
@@ -113,13 +115,64 @@ aussieht und so klingt.
 4. Technische Machbarkeit von Videosequenzen und Konzerten in Roblox
 5. Welche weiteren Plattformen zur Welt passen
 
+## Das Material des CEO (gesichtet 26.07.2026)
+
+Google Drive, Ordner „BIS UMSTELLUNG GAMES". Durchgehend Midjourney-Material,
+Bilder und `.mp4`-Videos.
+
+**Figuren:** Frau A – **TANGO** · Frau B – **SIESTA** · Mann B – **THE SUIT**
+**Szenen:** Concert (Bühne mit CMG-Banner) · Car Race · Casino · Lost Area ·
+Rain (Undercover-Agent, Luxusauto-Treffen) · General
+
+**Damit ist die Hauptfigur faktisch gesetzt: SIESTA.** Künstlerin und Spiel
+tragen denselben Namen — der offene Punkt „Wer ist die Figur" ist damit im Kern
+beantwortet, es fehlen nur noch Gesicht, Stimme und Verhältnis zu CMG.
+
+### Der tatsächliche Look des Materials
+
+Kino-Dämmerung: nasse, spiegelnde Straßen, Magenta-Himmel, silhouettierte Palmen,
+warme Fensterlichter, dunkle Sportwagen mit Reflexionen. Teils fast fotoreal
+(Figurenbilder), teils stilisiert-illustrativ (Lost Area).
+
+**Das ist nicht der Look des Spiels.** Das Spiel ist heller Cartoon-Nachmittag,
+das Material ist dunkle Kino-Dämmerung. Zwei Welten, die nicht zusammengehören.
+
+**Beschlossene Richtung: Das Spiel zieht nach — „Dämmerung nach dem Regen".**
+Dunklerer Himmel mit Magenta-Verlauf, spiegelnder Asphalt mit Neon-Reflexionen,
+silhouettierte Palmen, warme Punktlichter. Geometrie bleibt stilisiert wegen der
+Handy-Performance; nur Licht, Materialien und Palette ziehen nach. In Roblox über
+Atmosphere, Bloom, reflektierende Materialien und Punktlichter machbar — und
+zugleich näher am Vorbild als der helle Look.
+
+Interessant: Die Palette des Materials ist die vorhandene Sunset-Pop-Palette,
+nur nach Sonnenuntergang. Magenta, Türkis, warmes Gelb — nichts muss neu
+erfunden werden, nur abgedunkelt.
+
+### Drei Risiken im Material
+
+1. **Dateinamen.** Viele Dateien heißen wörtlich `Grand_Theft_Auto_V_Style…`.
+   Als privater Arbeitsweg unproblematisch, aber diese Dateien dürfen **nie so
+   veröffentlicht werden** — nicht auf Social, nicht als Store-Grafik, nicht im
+   Presse-Kit. Vor jeder Verwendung umbenennen. Die Bilder selbst sind
+   unbedenklich, solange nichts Geschütztes abgebildet ist; der Dateiname wäre
+   der Beleg gegen uns.
+2. **Casino.** Glücksspiel-Inhalte sind auf Roblox eingeschränkt und gefährden
+   die Altersfreigabe „All Ages". Für Musik- und Videowelt in Ordnung, im Spiel
+   nicht bauen — oder umdeuten (Hotel, Konzerthalle, Yachtclub).
+3. **Zwei Bildsprachen.** Die fotorealistischen Figurenbilder passen zur
+   Musikmarke und zu Instagram, nicht auf die Store-Seite eines Kinderspiels.
+   Das ist kein Widerspruch, sondern normale Transmedia-Praxis — Filmschicht und
+   Spielschicht dürfen unterschiedlich aussehen. Es muss nur bewusst getrennt
+   bleiben.
+
 ## Was schon existiert
 
 - **Spiel**: Turbo Siesta, spielbar in Roblox (privat) und als Web-Fassung
 - **Welt-Fragmente**: Solara Bay, die Siesta-Verordnung, Radio Solara,
   ¡Pronto!, die Siesta-Patrol, das Knöllchen-Selfie, der Musterbürger-Trick
 - **Optik**: Sunset-Pop — Golden Hour, Lila-Asphalt, Neon-Flamingo
-- **Material**: Bild- und Videomaterial des CEO, noch nicht gesichtet
-  (kommt nach `welt/`)
+- **Material**: gesichtet, siehe Abschnitt oben — drei Figuren, sechs Szenensets,
+  Bilder und Videos
 
-Die Welt hat also schon einen Ton und einen Ort. Was fehlt, ist die Figur.
+Die Welt hat einen Ton, einen Ort und jetzt auch eine Figur. Was fehlt, ist der
+Abgleich zwischen Filmschicht und Spielschicht — und die Musik.
