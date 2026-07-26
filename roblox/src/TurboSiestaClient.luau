@@ -130,8 +130,12 @@ end)
 local gui = Instance.new("ScreenGui")
 gui.Name = "TurboSiestaHUD"
 gui.ResetOnSpawn = false
-gui.IgnoreGuiInset = true
+-- IgnoreGuiInset = false: das HUD beginnt UNTER Roblox' eigener Topbar
+-- (Menue-, Chat- und Freunde-Button), statt sie zu ueberlagern.
+gui.IgnoreGuiInset = false
 gui.Parent = player:WaitForChild("PlayerGui")
+
+local TOP = 10 -- zusaetzlicher Abstand innerhalb des Inset-Bereichs
 
 local FONT = Enum.Font.FredokaOne
 
@@ -157,26 +161,26 @@ local function label(props)
 end
 
 local walletL = label({ text = "$0", color = rgb(Config.Colors.star), bg = true,
-	size = UDim2.new(0, 150, 0, 44), pos = UDim2.new(0, 14, 0, 14) })
+	size = UDim2.new(0, 150, 0, 44), pos = UDim2.new(0, 14, 0, TOP) })
 local bankL = label({ text = "Bank $0", color = Color3.fromRGB(255, 246, 230), bg = true,
-	size = UDim2.new(0, 150, 0, 26), pos = UDim2.new(0, 14, 0, 62) })
+	size = UDim2.new(0, 150, 0, 26), pos = UDim2.new(0, 14, 0, TOP + 48) })
 local serieL = label({ text = "", color = rgb(Config.Colors.flamingo), bg = true,
-	size = UDim2.new(0, 150, 0, 26), pos = UDim2.new(0, 14, 0, 92) })
+	size = UDim2.new(0, 150, 0, 26), pos = UDim2.new(0, 14, 0, TOP + 78) })
 serieL.Visible = false
 
 local starsL = label({ text = "", color = rgb(Config.Colors.star),
-	size = UDim2.new(0, 240, 0, 34), pos = UDim2.new(1, -14, 0, 14), anchor = Vector2.new(1, 0) })
+	size = UDim2.new(0, 240, 0, 34), pos = UDim2.new(1, -14, 0, TOP), anchor = Vector2.new(1, 0) })
 starsL.TextXAlignment = Enum.TextXAlignment.Right
 local multL = label({ text = "", color = rgb(Config.Colors.star),
-	size = UDim2.new(0, 240, 0, 22), pos = UDim2.new(1, -14, 0, 50), anchor = Vector2.new(1, 0) })
+	size = UDim2.new(0, 240, 0, 22), pos = UDim2.new(1, -14, 0, TOP + 36), anchor = Vector2.new(1, 0) })
 multL.TextXAlignment = Enum.TextXAlignment.Right
 
 local missionL = label({ text = "", color = Color3.new(1, 1, 1), bg = true,
-	size = UDim2.new(0, 300, 0, 34), pos = UDim2.new(0.5, 0, 0, 14), anchor = Vector2.new(0.5, 0) })
+	size = UDim2.new(0, 300, 0, 34), pos = UDim2.new(0.5, 0, 0, TOP), anchor = Vector2.new(0.5, 0) })
 missionL.Visible = false
 local timerBg = Instance.new("Frame")
 timerBg.Size = UDim2.new(0, 280, 0, 8)
-timerBg.Position = UDim2.new(0.5, 0, 0, 52)
+timerBg.Position = UDim2.new(0.5, 0, 0, TOP + 38)
 timerBg.AnchorPoint = Vector2.new(0.5, 0)
 timerBg.BackgroundColor3 = Color3.fromRGB(43, 26, 85)
 timerBg.BorderSizePixel = 0
@@ -199,7 +203,7 @@ end)
 local toastFrame = Instance.new("Frame")
 toastFrame.BackgroundTransparency = 1
 toastFrame.Size = UDim2.new(0, 340, 0, 130)
-toastFrame.Position = UDim2.new(0.5, 0, 0, 66)
+toastFrame.Position = UDim2.new(0.5, 0, 0, TOP + 54)
 toastFrame.AnchorPoint = Vector2.new(0.5, 0)
 toastFrame.Parent = gui
 local toastLayout = Instance.new("UIListLayout")

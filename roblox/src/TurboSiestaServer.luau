@@ -57,22 +57,41 @@ end
 
 -- --------------------------------------------------------------- Golden Hour
 local function setupLighting()
-	Lighting.ClockTime = 17.4
-	Lighting.Brightness = 2.4
-	Lighting.Ambient = Color3.fromRGB(120, 84, 110)
-	Lighting.OutdoorAmbient = Color3.fromRGB(150, 100, 96)
-	Lighting.GeographicLatitude = 15
+	-- Ewige Golden Hour: Sonne knapp ueber dem Horizont, warme Toenung,
+	-- dichter Dunst und Bloom — damit die Stadt wie in den Thumbnails aussieht.
+	Lighting.ClockTime = 17.85
+	Lighting.Brightness = 2.1
+	Lighting.Ambient = Color3.fromRGB(112, 72, 106)
+	Lighting.OutdoorAmbient = Color3.fromRGB(172, 106, 88)
+	Lighting.GeographicLatitude = 12
+	Lighting.ExposureCompensation = 0.15
+	Lighting.EnvironmentDiffuseScale = 0.6
+	Lighting.EnvironmentSpecularScale = 0.4
+
 	local cc = Instance.new("ColorCorrectionEffect")
-	cc.TintColor = Color3.fromRGB(255, 226, 200)
-	cc.Saturation = 0.18
-	cc.Contrast = 0.06
+	cc.TintColor = Color3.fromRGB(255, 214, 178)
+	cc.Saturation = 0.26
+	cc.Contrast = 0.1
 	cc.Parent = Lighting
+
 	local atmo = Instance.new("Atmosphere")
-	atmo.Density = 0.35
-	atmo.Color = Color3.fromRGB(255, 160, 100)
-	atmo.Decay = Color3.fromRGB(140, 70, 100)
-	atmo.Haze = 1.6
+	atmo.Density = 0.42
+	atmo.Color = Color3.fromRGB(255, 150, 90)
+	atmo.Decay = Color3.fromRGB(122, 58, 112)
+	atmo.Haze = 2.2
+	atmo.Glare = 0.35
 	atmo.Parent = Lighting
+
+	local bloom = Instance.new("BloomEffect")
+	bloom.Intensity = 0.65
+	bloom.Size = 26
+	bloom.Threshold = 1.3
+	bloom.Parent = Lighting
+
+	local rays = Instance.new("SunRaysEffect")
+	rays.Intensity = 0.08
+	rays.Spread = 0.7
+	rays.Parent = Lighting
 end
 
 -- --------------------------------------------------------------- Stadt bauen
@@ -264,16 +283,20 @@ function buildHub(x0, z0, x1, z1)
 	-- Hub-Schild
 	local sign = part({ name = "HubSign", size = Vector3.new(14, 4, 0.6), color = rgb(Config.Colors.flamingo),
 		material = Enum.Material.Neon, cf = CFrame.new(cx, 9, wz0 + 2) })
-	local sg = Instance.new("SurfaceGui")
-	sg.Face = Enum.NormalId.Front
-	sg.SizingMode = Enum.SurfaceGuiSizingMode.PixelsPerStud
-	sg.PixelsPerStud = 30
+	-- BillboardGui statt SurfaceGui: der Text ist aus jeder Richtung lesbar,
+	-- egal von welcher Seite man auf die Plaza faehrt.
+	local sg = Instance.new("BillboardGui")
+	sg.Size = UDim2.new(0, 300, 0, 76)
+	sg.StudsOffset = Vector3.new(0, 0.4, 0)
+	sg.AlwaysOnTop = false
+	sg.MaxDistance = 700
 	sg.Parent = sign
 	local tl = Instance.new("TextLabel")
 	tl.Size = UDim2.new(1, 0, 1, 0)
 	tl.BackgroundTransparency = 1
 	tl.Text = "¡PRONTO! HUB"
 	tl.TextColor3 = Color3.new(1, 1, 1)
+	tl.TextStrokeTransparency = 0.25
 	tl.TextScaled = true
 	tl.Font = Enum.Font.FredokaOne
 	tl.Parent = sg
