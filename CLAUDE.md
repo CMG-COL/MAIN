@@ -104,6 +104,13 @@ mindestens einmal in Studio gelaufen ist.
 
 ## Guardrails
 
+0. **NICHTS GEHT LIVE OHNE AUSDRÜCKLICHE FREIGABE DES CEO.**
+   Kein Public-Schalten der Roblox-Experience, keine Veröffentlichung von
+   Social-Profilen, Videos, Songs, Webseiten oder Pressetexten — auch kein
+   „kleiner Test", auch nichts Unauffälliges. Vorbereiten ja, veröffentlichen
+   nein. Im Zweifel: nicht veröffentlichen und fragen. Diese Regel steht über
+   allen anderen und gilt für jede Session, lokal wie Cloud.
+
 1. **Kein Geld ohne CEO-Freigabe.** Werbebudget, Tools, Abos, DevEx-Auszahlungen
    werden vorgeschlagen, nie ausgelöst.
 2. **`ROBLOX_API_KEY` gehört nicht ins Repo.** Als Umgebungsvariable setzen. Die
