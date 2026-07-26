@@ -19,6 +19,36 @@ P Vorrang vor M und G (Begründung in `BUSINESS-CASE.md` Abschnitt 3).
 | 7 | G | **3 Clips drehen** (Musterbürger-Trick, Knöllchen, Alphorn-Hupe) | Klicks auf Spiel-Link | offen |
 | 8 | P | **Radio Solara mit eigener CMG-Musik** — 3–4 Instrumental-Loops, Sender-Umschalter im Auto, Mute-Knopf, Credits mit Link | Session-Zeit ↑ | wartet auf Tracks vom CEO |
 
+### Musik-Strategie — drei Wege, in dieser Reihenfolge prüfen
+
+**Weg A — Lizenzierter Katalog über Partner-Distributor (bevorzugt, offen)**
+Roblox betreibt eine **Music Top 100** (Beta), gerankt nach *Playtime* und
+*Adoption* (Zahl der Experiences, die den Track nutzen). Sie umfasst lizenzierte
+Musik, die über Partner-Distributoren mit ISRC eingespeist wird — genannt sind
+**DistroKid**, Monstercat, APM, Clippsly.
+
+Wenn der bestehende CMG-Katalog über DistroKid für Roblox freigegeben werden
+kann, löst das das Fingerprint-Problem vollständig und macht die Musik zugleich
+chart-fähig. Das eigene Spiel wäre der erste Playtime-Lieferant.
+→ **Zu klären durch den CEO im DistroKid-Konto.** Offene Punkte: Verfügbarkeit
+der Roblox-Option, Konditionen, wie freigegebene Tracks in der eigenen Experience
+referenziert werden.
+
+**Weg B — Eigene Audio-Uploads (funktioniert, aber nur für neues Material)**
+Selbst hochgeladene Assets laufen durch Audible-Magic-Fingerprinting. Alles, was
+je über einen Distributor lief, wird getroffen; einen Eigentumsnachweis gibt es
+nicht, Treffer zählen gegen den Account. Deshalb hier ausschließlich **neu
+produzierte, nie distribuierte** Instrumentals.
+
+**Weg C — Web-Fassung**
+Kein Scanner, eigenes Hosting. Der bestehende Katalog kann dort uneingeschränkt
+laufen und als Schaufenster dienen.
+
+**Werbe-Regel beachten:** Seit 4. Mai 2026 gilt bei Roblox als Werbung, was
+plattformfremde Produkte bewirbt — ein Spotify-Verweis im Spiel fällt darunter.
+Im Spiel deshalb nur on-platform nennen (Titel, Interpret, „Radio Solara
+präsentiert"), harte Links in die Store-Beschreibung.
+
 ### Zug 8 im Detail — Radio Solara
 
 **Warum:** Musik ist in Fahrspielen einer der stärksten Verweilgründe, und
@@ -56,6 +86,16 @@ die Experience muss explizit freigegeben werden.
 abschaltbare Musik kostet Likes), Credits im HUD mit Link in der
 Store-Beschreibung. In der Web-Fassung dieselben Loops, komprimiert, damit die
 Ladezeit unter einer Sekunde bleibt.
+
+**Ausbaustufen (jeweils eigener Zug, nach Messwerten priorisieren):**
+
+| Stufe | Inhalt | Warum |
+|---|---|---|
+| 8a | Grundton für Roblox: Motor, Sirene, Kasse, Crash, Hupe — die Roblox-Fassung hat aktuell **gar keinen Ton** | Basis; ohne Motorsound fühlt sich Fahren tot an |
+| 8b | Radio mit 3–4 Sendern, Umschalter, Mute | Session-Zeit |
+| 8c | Moderationen zwischen den Tracks, die nebenbei Spielmechanik erklären („der Musterbürger-Trick") | Onboarding, das nicht wie Onboarding klingt — zahlt auf die erste Minute ein |
+| 8d | Szenenbasierte Musik: ruhig beim Cruisen → Spannungs-Layer ab 1 Stern → Verfolgungsmusik ab 3 → Erfolgs-Jingle in der Waschanlage | Musik als Feedback statt als Tapete |
+| 8e | Club-Zone in La Promenada oder Marina Bling mit eigenem Track, Licht, Tanz-Emotes, Lieferaufträge dorthin | freiwilliger Verweilort = direkte Session-Zeit |
 
 **Nebeneffekt Marketing:** Cross-Promotion in beide Richtungen — das Spiel
 bewirbt die Musik, die Musikkanäle bewerben das Spiel.
