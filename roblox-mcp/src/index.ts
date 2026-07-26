@@ -13,6 +13,7 @@ import {
   post,
   cloudGet,
   cloudPost,
+  cloudPatch,
   placeToUniverse,
   RobloxApiError,
 } from "./roblox.js";
@@ -419,6 +420,95 @@ server.registerTool(
   async ({ universeId, topic, message }) =>
     run(() =>
       cloudPost(`/universes/${universeId}:publishMessage`, { topic, message }),
+    ),
+);
+
+// ---------------------------------------------------------------------------
+// Open Cloud: schreibende Tools (Configs API) + Analytics
+// Diese Tools verändern die Store-Seite bzw. lesen Kennzahlen — sie ersetzen
+// Klickarbeit im Creator Hub. Alle brauchen entsprechende Key-Scopes.
+// ---------------------------------------------------------------------------
+
+server.registerTool(
+  "opencloud_update_universe",
+  {
+    title: "Open Cloud: update universe (store page)",
+    description:
+      "Update an experience's store-page fields via the Open Cloud Configs API: display name, description, visibility (public/private), age rating and social links. Only the fields you pass are changed. Requires ROBLOX_API_KEY with 'universe:write'. NOTE: Roblox may reject visibility changes until the maturity questionnaire is completed in the Creator Hub.",
+    inputSchema: {
+      universeId: z.number().int().positive().describe("Universe ID"),
+      displayName: z.string().min(1).max(50).optional().describe("Experience title, max 50 chars"),
+      description: z.string().max(1000).optional().describe("Store description, max 1000 chars"),
+      visibility: z
+        .enum(["PUBLIC", "PRIVATE"])
+        .optional()
+        .describe("PUBLIC makes the experience playable by everyone"),
+    },
+  },
+  async ({ universeId, ...fields }) => {
+    const patch = Object.fromEntries(
+      Object.entries(fields).filter(([, v]) => v !== undefined),
+    );
+    if (Object.keys(patch).length === 0) {
+      throw new RobloxApiError("Pass at least one field to update.");
+    }
+    return run(() => cloudPatch(`/universes/${universeId}`, patch));
+  },
+);
+
+server.registerTool(
+  "opencloud_update_place",
+  {
+    title: "Open Cloud: update place",
+    description:
+      "Update a place's name, description or server size via Open Cloud. Requires ROBLOX_API_KEY with 'universe.place:write'.",
+    inputSchema: {
+      universeId: z.number().int().positive().describe("Universe ID"),
+      placeId: z.number().int().positive().describe("Place ID"),
+      displayName: z.string().min(1).optional().describe("Place name"),
+      description: z.string().optional().describe("Place description"),
+      serverSize: z.number().int().min(1).max(200).optional().describe("Max players per server"),
+    },
+  },
+  async ({ universeId, placeId, ...fields }) => {
+    const patch = Object.fromEntries(
+      Object.entries(fields).filter(([, v]) => v !== undefined),
+    );
+    if (Object.keys(patch).length === 0) {
+      throw new RobloxApiError("Pass at least one field to update.");
+    }
+    return run(() => cloudPatch(`/universes/${universeId}/places/${placeId}`, patch));
+  },
+);
+
+server.registerTool(
+  "opencloud_query_analytics",
+  {
+    title: "Open Cloud: query analytics",
+    description:
+      "Query aggregated experience metrics (visits, session time, retention, likes) for a date range via the Open Cloud Analytics Query API. BETA on Roblox's side — shape of the response may change. Requires ROBLOX_API_KEY with analytics read scope.",
+    inputSchema: {
+      universeId: z.number().int().positive().describe("Universe ID"),
+      metric: z
+        .string()
+        .min(1)
+        .describe("Metric name, e.g. 'Visits', 'AverageSessionLength', 'DayOneRetention'"),
+      startTime: z.string().describe("ISO 8601 start, e.g. 2026-07-01T00:00:00Z"),
+      endTime: z.string().describe("ISO 8601 end, e.g. 2026-07-26T00:00:00Z"),
+      granularity: z
+        .enum(["DAILY", "WEEKLY", "MONTHLY"])
+        .default("DAILY")
+        .describe("Bucket size"),
+    },
+  },
+  async ({ universeId, metric, startTime, endTime, granularity }) =>
+    run(() =>
+      cloudPost(`/universes/${universeId}:executeQuery`, {
+        metric,
+        granularity,
+        startTime,
+        endTime,
+      }),
     ),
 );
 

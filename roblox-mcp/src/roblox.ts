@@ -118,6 +118,20 @@ export function cloudPost<T>(path: string, body: unknown): Promise<T> {
   });
 }
 
+/**
+ * Update a resource via the Open Cloud Configs API. `fields` are the object keys
+ * to change; Roblox requires them listed in the updateMask query parameter.
+ */
+export function cloudPatch<T>(path: string, fields: Record<string, unknown>): Promise<T> {
+  const mask = Object.keys(fields).join(",");
+  const sep = path.includes("?") ? "&" : "?";
+  return request<T>(`${OPEN_CLOUD_BASE}${path}${sep}updateMask=${encodeURIComponent(mask)}`, {
+    method: "PATCH",
+    body: JSON.stringify(fields),
+    headers: { "x-api-key": apiKey() },
+  });
+}
+
 /** Resolve a placeId (from a roblox.com/games/<placeId>/... URL) to its universeId. */
 export async function placeToUniverse(placeId: number): Promise<number> {
   const data = await get<{ universeId: number }>(
