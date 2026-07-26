@@ -113,15 +113,13 @@ Kurz halten. Eine Entscheidung pro Vorlage.
 
 ## Referenzen
 
-Belegte Plattform-Fakten (Gebühren, DevEx-Kurse, Werbe-Mindestbudgets,
-Open-Cloud-Fähigkeiten) stehen in:
+Belegte Plattform-Fakten — Gebühren, DevEx-Kurse, Werbe-Mindestbudgets,
+Discovery-Mechanik, Open-Cloud-Fähigkeiten, jeweils mit Quelle — stehen in
+`references/roblox-plattformfakten.md`.
 
-- `references/roblox-monetarisierung.md`
-- `references/roblox-wachstum-werbung.md`
-- `references/roblox-automatisierung.md`
-
-Diese Dateien werden bei Plattformänderungen aktualisiert, nicht aus dem
-Gedächtnis zitiert. Wenn eine Zahl für eine Entscheidung zählt, vorher prüfen.
+Diese Datei wird bei Plattformänderungen aktualisiert, nicht aus dem Gedächtnis
+zitiert. Wenn eine Zahl für eine Entscheidung zählt, vorher gegen die Quelle
+prüfen.
 
 ## Bekannte Blocker
 
