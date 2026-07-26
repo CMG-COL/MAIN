@@ -2,7 +2,14 @@
   "mcpServers": {
     "roblox": {
       "command": "node",
-      "args": ["roblox-mcp/dist/index.js"]
+      "args": ["roblox-mcp/dist/index.js"],
+      "env": {
+        "ROBLOX_API_KEY": "${ROBLOX_API_KEY}"
+      }
+    },
+    "lovable": {
+      "type": "http",
+      "url": "https://mcp.lovable.dev/?src=settings"
     }
   }
 }
