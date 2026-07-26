@@ -8,31 +8,49 @@ P Vorrang vor M und G (Begründung in `BUSINESS-CASE.md` Abschnitt 3).
 
 ## Jetzt (nächste Züge, in dieser Reihenfolge)
 
+**CEO-Entscheidung vom 26.07.2026:** Das Spiel bleibt **privat**, bis Optik und
+Ton stimmen. Begründung: Der Algorithmus testet neue Experiences mit kleinen
+Impression-Wellen; ein Livegang mit halbfertiger Optik und ohne Ton verschenkt
+diese ersten Wellen. Erst gut machen, dann öffnen.
+
 | # | Strang | Zug | Messgröße | Status |
 |---|---|---|---|---|
-| 1 | — | **Spiel auf Public schalten** + Store-Seite füllen (Icon, 3 Thumbnails, Beschreibung, Genre, Fragebogen, API-Services) | Spiel ist öffentlich erreichbar | offen · CEO (lokal) |
-| 2 | P | **Design-Upgrades einspielen** (Modelle aus dem Design-Chat) → neue `.rbxlx`, in Studio testen, Update publishen | Optik entspricht den Thumbnails | wartet auf Assets |
+| 1 | P | **Design-Upgrades einspielen** (Modelle aus dem Design-Chat) → neue `.rbxlx`, in Studio testen | Optik entspricht den Thumbnails | wartet auf Assets |
+| 2 | P | **Grundton für Roblox** (8a): Motor, Sirene, Kasse, Crash, Hupe — aktuell hat die Roblox-Fassung **gar keinen Ton** | Spiel fühlt sich lebendig an | offen, kann sofort starten |
 | 3 | P | **Erste 60 Sekunden**: Spawn direkt im Auto mit aktivem Erstauftrag statt daneben | Abbruch in Minute 1 ↓ | offen |
-| 4 | G | **Erste Messwerte erfassen** (Creator Dashboard → `MESSWERTE.md`) | Basiswerte existieren | blockiert durch #1 |
-| 5 | M | **Kosmetik-Pass „Lackierungen"** (49–99 R$) via ShopKit einbauen | Zahlerquote in % | blockiert bis Haltequoten ok |
-| 6 | P | **Zivilverkehr + Feder-Stoßstange** (Parität zur Web-Fassung) | Session-Zeit ↑ | offen |
-| 7 | G | **3 Clips drehen** (Musterbürger-Trick, Knöllchen, Alphorn-Hupe) | Klicks auf Spiel-Link | offen |
-| 8 | P | **Radio Solara mit eigener CMG-Musik** — 3–4 Instrumental-Loops, Sender-Umschalter im Auto, Mute-Knopf, Credits mit Link | Session-Zeit ↑ | wartet auf Tracks vom CEO |
+| 4 | P | **Radio Solara** (8b–8d): Sender, Umschalter, Mute, szenenbasierte Musik | Session-Zeit ↑ | wartet auf Tracks |
+| 5 | — | **Store-Seite fertig füllen** (Icon, 3 Thumbnails, Beschreibung, Genre, Fragebogen, API-Services) — **noch nicht Public** | Seite ist vollständig | offen · lokale Session |
+| 6 | — | **Public schalten** — erst wenn 1 bis 5 erledigt und in Studio getestet | Spiel öffentlich | **Freigabe CEO** |
+| 7 | G | **Erste Messwerte erfassen** (Creator Dashboard → `MESSWERTE.md`) | Basiswerte existieren | blockiert durch #6 |
+| 8 | G | **3 Clips drehen** (Musterbürger-Trick, Knöllchen, Alphorn-Hupe) | Klicks auf Spiel-Link | offen |
+| 9 | P | **Zivilverkehr + Feder-Stoßstange** (Parität zur Web-Fassung) | Session-Zeit ↑ | offen |
+| 10 | M | **Kosmetik-Pass „Lackierungen"** (49–99 R$) via ShopKit einbauen | Zahlerquote in % | blockiert bis Haltequoten ok |
+| 11 | P | **Club-Zone** (8e) mit eigenem Track, Licht, Tanz-Emotes | Session-Zeit ↑ | nach Livegang |
 
 ### Musik-Strategie — drei Wege, in dieser Reihenfolge prüfen
 
-**Weg A — Lizenzierter Katalog über Partner-Distributor (bevorzugt, offen)**
+**Weg A — DistroKid → Roblox (geprüft, mit harter Einschränkung)**
 Roblox betreibt eine **Music Top 100** (Beta), gerankt nach *Playtime* und
-*Adoption* (Zahl der Experiences, die den Track nutzen). Sie umfasst lizenzierte
-Musik, die über Partner-Distributoren mit ISRC eingespeist wird — genannt sind
-**DistroKid**, Monstercat, APM, Clippsly.
+*Adoption* (Zahl der Experiences, die den Track nutzen), gespeist aus lizenzierter
+Musik über Partner-Distributoren mit ISRC — darunter **DistroKid**.
 
-Wenn der bestehende CMG-Katalog über DistroKid für Roblox freigegeben werden
-kann, löst das das Fingerprint-Problem vollständig und macht die Musik zugleich
-chart-fähig. Das eigene Spiel wäre der erste Playtime-Lieferant.
-→ **Zu klären durch den CEO im DistroKid-Konto.** Offene Punkte: Verfügbarkeit
-der Roblox-Option, Konditionen, wie freigegebene Tracks in der eigenen Experience
-referenziert werden.
+*Ablauf:* Im DistroKid-Upload „Roblox" als Store auswählen; bei bestehenden
+Releases über die Album-Seite → „+Add to more stores".
+
+*Bedingungen (recherchiert 26.07.2026):*
+- 100 % der Verlagsrechte müssen beim Uploader liegen
+- **Keine Registrierung bei einer Verwertungsgesellschaft** (genannt ASCAP, BMI —
+  **GEMA fällt genauso darunter**). Das schließt den bestehenden, GEMA-gemeldeten
+  CMG-Katalog aus.
+- Kein explizites Material
+- Der Roblox Creator Store ist kuratiert — Opt-in ist keine Aufnahmegarantie
+- **Keine Monetarisierung**: Roblox zahlt über diesen Weg keine Tantiemen
+
+*Konsequenz:* Der Weg funktioniert nur mit **neu produzierten Tracks, die bewusst
+nicht bei der GEMA angemeldet werden**. Dafür sind sie dann offiziell lizenziert
+(kein Fingerprint-Risiko), chart-fähig und auch von anderen Entwicklern nutzbar,
+was direkt auf „Adoption" einzahlt. Wert = Reichweite für die Musik, nicht Umsatz.
+→ **Entscheidung CEO:** GEMA-Verzicht für die Spiel-Tracks ja oder nein.
 
 **Weg B — Eigene Audio-Uploads (funktioniert, aber nur für neues Material)**
 Selbst hochgeladene Assets laufen durch Audible-Magic-Fingerprinting. Alles, was

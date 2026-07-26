@@ -14,7 +14,13 @@ Du bist die **lokale** Session, also die einzige, die Roblox tatsächlich erreic
 über den `roblox`-MCP (Open Cloud) und über den Studio-MCP (laufendes Studio).
 Nutze das. Frag nicht nach Dingen, die du selbst prüfen kannst.
 
-**Deine Aufgabe jetzt: Zug 1 aus `business/BACKLOG.md` — das Spiel live bringen.**
+**⚠️ Wichtig vorweg: Das Spiel bleibt vorerst PRIVAT.** Der CEO hat entschieden,
+erst Optik und Ton fertigzustellen und dann zu öffnen — der Roblox-Algorithmus
+testet neue Experiences mit wenigen Impression-Wellen, die man nicht mit einem
+halbfertigen Stand verschenken will. **Setze die Sichtbarkeit also NICHT auf
+PUBLIC.** Das ist Zug 6 und braucht eine ausdrückliche Freigabe.
+
+**Deine Aufgabe jetzt: Bestandsaufnahme und Store-Seite vorbereiten.**
 
 Arbeite in dieser Reihenfolge und melde nach jedem Punkt ein Wort Ergebnis:
 
@@ -28,15 +34,12 @@ Arbeite in dieser Reihenfolge und melde nach jedem Punkt ein Wort Ergebnis:
    die tatsächlichen Stände dort ein (✅/⚠️/⬜/❌). Keine Vermutungen — nur was du
    über die API oder in Studio gesehen hast.
 
-3. **Store-Seite füllen — so weit per API möglich.** Mit
+3. **Store-Seite füllen — so weit per API möglich, aber ohne Public.** Mit
    `opencloud_update_universe`:
    - Beschreibung: den 890-Zeichen-Block aus `marketing/ROBLOX-MARKETING.md`
      (englischer Teil + deutscher Anhang + Tags-Zeile)
    - Titel prüfen, er soll `🌴 Turbo Siesta 🚗 Drift Delivery Simulator` sein
-   - Sichtbarkeit auf `PUBLIC` setzen
-   Wenn Roblox die Sichtbarkeitsänderung ablehnt, ist meist der
-   Maturity-Fragebogen offen — dann sag es mir mit der genauen Fehlermeldung,
-   das ist einer der wenigen Punkte, die nur ich im Browser erledigen kann.
+   - **Sichtbarkeit NICHT anfassen** — das Spiel bleibt privat bis zur Freigabe
 
 4. **Was die API nicht kann, in Studio machen.** Server-Größe 12, Geräte
    Computer/Phone/Tablet (VR aus), Settings → Security → „Enable Studio Access to
@@ -50,22 +53,18 @@ Arbeite in dieser Reihenfolge und melde nach jedem Punkt ein Wort Ergebnis:
    `roblox/src/*.luau`, baue neu mit `node roblox/build-rbxlx.js` und publishe
    über **Update existing experience** (nie „Create new").
 
-6. **Erste Messwerte holen.** Sobald das Spiel öffentlich ist, hole über
-   `opencloud_query_analytics` (oder aus dem Creator Dashboard, falls die Beta-API
-   nichts liefert) Besuche, Session-Zeit und Like-Ratio und schreibe die erste
-   Zeile in `business/MESSWERTE.md`.
+6. **Aufräumen.** Die alte Experience „SiestaLovers's Place" archivieren.
 
-7. **Aufräumen.** Die alte Experience „SiestaLovers's Place" archivieren.
-
-8. **Buchen und committen.** `business/BACKLOG.md` fortschreiben (Zug 1 als
-   erledigt, nächster Zug nach oben), `business/SANITY-CHECKS.md` aktualisieren,
-   alles committen und pushen auf `claude/gta-style-ios-game-1lrny6`.
+7. **Buchen und committen.** `business/SANITY-CHECKS.md` mit den echten Ständen
+   aktualisieren, `business/BACKLOG.md` fortschreiben, alles committen und pushen
+   auf `claude/gta-style-ios-game-1lrny6`.
 
 **Zum Schluss melde mir genau vier Dinge:**
 - Universe-ID und Place-ID
-- Ist das Spiel öffentlich? Ja/Nein, und falls nein: woran es hängt
 - Welche Punkte der Prüfliste jetzt grün sind — und welche nicht
-- Die erste Messwert-Zeile
+- Was im Spieltest gehakt hat (und was du gefixt hast)
+- Ob der Maturity-Fragebogen ausgefüllt ist — den brauchen wir später fürs
+  Public-Schalten, er kann jetzt schon erledigt werden
 
 **Guardrails, die du nicht brichst:** kein Geld ausgeben, keine Preise
 festlegen, keine Monetarisierung einbauen ohne meine Freigabe. Keine
