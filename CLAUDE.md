@@ -43,6 +43,27 @@ Vollständiges Design: `docs/GDD.md`.
 **Der Zustand lebt im Repo.** Arbeitsumgebungen sind flüchtig — nach jedem Zug
 committen, sonst ist der Stand weg.
 
+## Welche Session ist welche
+
+Nicht Browser gegen App unterscheiden — **Cloud-Session gegen lokale Session**.
+Derselbe Chat sieht im Browser und in der Desktop-App identisch aus und ist auch
+derselbe. Das Erkennungsmerkmal ist das Wolken-Symbol:
+
+| | Merkmal | Läuft auf | Zuständig für |
+|---|---|---|---|
+| **Cloud-Session** | ☁️ Wolken-Symbol am Titel | Anthropic-Container | Strategie, Backlog, Zahlen, Code, Assets, Repo, PRs |
+| **Lokale Session** | kein Wolken-Symbol | Chris' Mac | Studio, Publishen, echte Roblox-APIs |
+
+Feste Aufteilung, damit nichts doppelt läuft:
+
+- **Ein** Cloud-Chat ist das PMO (dieser hier). Von überall erreichbar, Browser
+  oder App egal.
+- **Eine** lokale Session in der Desktop-App mit Arbeitsverzeichnis `MAIN` ist der
+  Ausführungsarm für Studio. Sie bekommt ihre Aufträge über
+  `business/BRIEFING-LOKAL.md`.
+- Der Browser kann keine lokale Session öffnen. Studio-Arbeit geht deshalb
+  ausschließlich über die Desktop-App oder das Terminal.
+
 ## Arbeitsteilung Cloud ↔ lokal
 
 Das ist keine Vorliebe, sondern eine technische Grenze:
