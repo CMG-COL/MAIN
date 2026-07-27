@@ -5,93 +5,97 @@ und wird durch die vom CEO aufgesprochene Fassung ersetzt oder mit ihr verschmol
 
 ---
 
-## Teil 1 — Plot-Vorschlag v0.1
+## Teil 1 — Plot v0.2 (nach Korrektur durch den CEO)
 
-Gebaut aus dem, was schon existiert: den drei Figuren aus dem Material, den sechs
-Szenensets und der Spielfiktion. **Nicht als endgültig gedacht** — als etwas, an
-dem man sich reiben kann.
-
-### Die Prämisse
-
-**Solara Bay hat ein Gesetz: Ruhe.** Per Verordnung ist immer irgendwo Siesta.
-Wer laut ist, stört. Wer stört, wird notiert. Die Siesta-Patrol verhaftet
-niemanden — sie macht Fotos, schreibt Knöllchen und schickt dich nach Hause.
-Sanfte Gewalt, freundlich lächelnd.
-
-In dieser Stadt gibt es eine, die es eilig hat.
+Ersetzt den ersten Entwurf. Diese Fassung folgt der vom CEO erzählten Geschichte.
 
 ### Die Figuren
 
-**SIESTA** — die Hauptfigur. Tagsüber fährt sie für ¡Pronto! aus, nachts macht
-sie Musik. Ihr Künstlername ist der Name, den die Stadt gegen sie verwendet: Man
-nennt sie SIESTA, weil sie die Einzige ist, die keine macht. Sie hat den Namen
-angenommen wie einen Orden.
+**JESTER** — die Hauptfigur. Schwarzhaarig, **tätowiert**. Sie ist die
+Fahrerin, die niemand kennt.
 
-**TANGO** — die Andere. Fährt dieselben Strecken, kennt dieselben Abkürzungen,
-will dasselbe. Ob Freundin oder Konkurrentin, entscheidet sich pro Nacht.
+**Die Doppelgängerin** — eine zweite Frau, die Jester **zum Verwechseln ähnlich
+sieht**. Wer wann gefahren ist, wer wann gesehen wurde, bleibt unklar. Das ist
+kein Zufall, sondern der Motor der Geschichte.
 
-**THE SUIT** — der Gegenspieler. Kein Bösewicht mit Waffe, sondern mit Formular.
-Er vertritt die Ruhe: Verordnungen, Lizenzen, Genehmigungen für Veranstaltungen,
-die nie erteilt werden. Er ist immer höflich. Das macht ihn schlimm.
+**TANGO** — bekannt, sichtbar, fährt die Rennen. Eine der Figuren, die man von
+Anfang an kennt.
 
-### Der Konflikt
+**LUCY SWEET SUIT** — ebenfalls von Anfang an bekannt, fährt ebenfalls.
 
-SIESTA will ein Konzert spielen. In Solara Bay ist das nicht verboten — es ist nur
-nie genehmigt. THE SUIT verweigert nicht, er verzögert: noch ein Formular, noch
-eine Prüfung, noch eine Ruhezeit.
+**Die Verfolger (Rain City)** — keine klassische Polizei. Erkennbar an einer
+**einheitlichen Jacke**, aber ohne Uniform. Sie versuchen, die Fahrer zu fassen —
+und **fahren bei den Rennen selbst mit.** Ihr Register ist das
+fotorealistischste der Welt.
 
-Also baut sie es sich selbst. Bühne, Strom, Publikum, Ort — alles muss besorgt,
-gefahren, geliefert werden. Jeder Auftrag im Spiel ist ein Stück davon. Das
-Trinkgeld ist nicht Score, es ist Baukapital.
+### Der Erzähltrick: die Unsichtbare
 
-Und je lauter sie wird, desto mehr verdient sie — und desto näher kommt die
-Patrol. Die Spielmechanik **ist** der Konflikt: Laut sein zahlt sich aus, bis es
-dich einholt.
+Am Anfang kennt man **Jester nicht.** Man kennt Tango und Lucy Sweet Suit.
 
-### Die Orte (aus dem Material)
+Aber immer wieder taucht **eine Person auf, die man nicht richtig sieht** — oder
+ein Auto, das plötzlich da ist und wieder weg. Nur schemenhaft. Sie fährt einem
+bei einem Rennen davon. Sie steigt vor dem Casino aus, aber im Gegenlicht,
+verdeckt, im falschen Moment. Sie ist nie ganz im Bild.
 
-| Ort | Rolle in der Geschichte |
-|---|---|
-| **La Promenada** | Der Alltag. Hier fährt sie aus, hier kennt man sie |
-| **Lost Area** | Der aufgegebene Distrikt. Keine Verordnung reicht bis hierher — hier soll das Konzert stattfinden |
-| **Marina Bling / „das Hotel"** | Wo THE SUIT residiert. Wo Genehmigungen entstehen und sterben |
-| **Car Race** | Nachts, inoffiziell. Wo man an Geld und Kontakte kommt |
-| **Concert** | Das Finale von Phase 1 |
-| **Rain** | Die Nacht, in der es kippt |
+Erst nach und nach setzt sich zusammen:
 
-> **Hinweis:** Das Casino-Material wird für das Spiel zum **Hotel** umgedeutet.
-> Glücksspiel-Inhalte gefährden auf Roblox die Altersfreigabe. In Videos und auf
-> Social ist die Casino-Optik unproblematisch — nur nicht als spielbarer Ort mit
-> Glücksspiel-Mechanik.
+1. Sie **lebt im Lost District** — dort, wo sonst niemand hingeht
+2. Dort steht **ihr Auto**: das Top-Auto, das die höchste Punktzahl fährt
+3. Und sie ist **DJ im Club** — dieselbe Person, ein anderes Leben
 
-### Der Bogen von Phase 1
+Die Auflösung ist nicht, *wer gewonnen hat*. Die Auflösung ist, **dass alle drei
+dieselbe sind.**
 
-1. **Anfang**: SIESTA fährt. Alltag, Sonne, Lieferungen. Die Stadt schläft.
-2. **Auslöser**: Die Absage. THE SUIT, höflich, endgültig.
-3. **Entscheidung**: Sie macht es trotzdem. Ab jetzt ist jede Fahrt Vorbereitung.
-4. **Eskalation**: Sie wird lauter. Die Patrol wird aufmerksam. Das Risiko steigt
-   mit dem Verdienst — genau wie im Spiel.
-5. **Tiefpunkt**: Eine Nacht im Regen, alles Ungesicherte weg. Das Knöllchen.
-6. **Finale**: Das Konzert in der Lost Area. Es findet statt. Ob es genehmigt war,
-   fragt hinterher niemand.
+### Die Ökonomie der Welt
 
-### Warum dieser Plot zum Spiel passt
+Vor dem **Casino** stehen immer die Top-Autos. Wer dort auftaucht, hat es
+geschafft — oder tut so.
 
-Er erklärt jede Mechanik, ohne sie zu erklären: Warum man liefert (Baukapital),
-warum Lautsein zahlt (Aufmerksamkeit ist Währung), warum man banken muss
-(Ungesichertes ist verloren), warum die Patrol nicht schießt (sie verwaltet, sie
-bekämpft nicht). Und er endet in einem Ereignis, das man im Spiel wirklich
-veranstalten kann.
+Man fährt, man verdient, und im Casino kann man den Einsatz **vervielfachen**.
+Das ist der Reiz und das Risiko zugleich: Es geht nicht darum, viel zu haben,
+sondern zu wissen, wann man aufhört.
 
-### Was deine Fassung klären muss
+Im **Lost District** findet man das Auto, das mehr Punkte fährt als alles andere —
+aber man muss erst wissen, dass es dort steht.
 
-- Stimmt die Rolle von THE SUIT — Antagonist oder etwas anderes?
-- Ist TANGO Verbündete, Konkurrentin oder beides?
-- Ist SIESTA eine Figur, die du spielst — oder eine, der du begegnest?
-- Gibt es die Musik in der Welt (sie ist Musikerin) oder ist sie nur Fahrerin?
-- Wie endet Phase 1 — mit dem Konzert oder davor?
+> **⚠️ Hinweis des CPO — bitte lesen:** Der CEO hat gesagt, die Waschanlage soll
+> das Casino werden. Der **Ort** ist unproblematisch, die **Mechanik** nicht:
+> Einsätze gegen Zufall vervielfachen ist simuliertes Glücksspiel. Roblox schränkt
+> das ein, und bei einer Experience mit Freigabe „All Ages" gefährdet es die
+> Einstufung — im schlimmsten Fall die Experience.
+>
+> **Lösung, die Fiktion und Regeln zusammenbringt:** Das Casino bleibt der Ort,
+> an dem gebankt wird und an dem sich Verdienst vervielfacht — aber der
+> Multiplikator ist **erspielt, nicht gewürfelt.** Er kommt aus den
+> Ruhestörungs-Sternen, also aus dem Risiko, das man beim Fahren eingegangen ist.
+> Man setzt seinen Ruf ein, nicht seinen Einsatz. Kein Zufall, kein Glücksspiel,
+> dieselbe Spannung — und erzählerisch sogar besser: In dieser Stadt gewinnt man
+> nicht am Tisch, sondern auf der Straße.
 
----
+### Die Welten
+
+| Welt | Rolle | Register |
+|---|---|---|
+| **Casino** | Schaufenster der Szene, Ort des Bankens | Kino, glänzend |
+| **Lost District** | Wo Jester lebt, wo das Top-Auto steht | dunkel, verfallen, magenta |
+| **Car Race** | Wo entschieden wird, wer zählt | Nacht, Tempo |
+| **Live & Class (Club)** | Der **Dance Club** — hier ist Jester DJ | Licht, Menge, Musik |
+| **Rain City** | Die Verfolger. Das fotorealistischste Register | Regen, Scheinwerfer |
+| **Limited Time Drive** | zeitlich begrenzte Fahrten — noch zu klären | offen |
+
+**Korrektur:** „Live & Class" ist der **Club**, nicht ein Konzert. Der Konzert-
+gedanke bleibt als späteres Live-Ereignis bestehen, ist aber nicht dieser Ort.
+
+**Keine Tag-Szenen.** Die Welt spielt in Dämmerung, Nacht und Regen. Das gilt
+auch für das Spiel — der helle Look wird abgelöst.
+
+### Was noch offen ist
+
+- Ist die Doppelgängerin eine eigene Figur oder eine Rolle, die Jester spielt?
+- Wie hängen Tango und Lucy Sweet Suit zusammen — Rivalinnen, Team, Paar?
+- Fährt der Spieler *als* Jester oder *auf sie zu*, bis er sie enttarnt?
+- Was ist „Limited Time Drive" — Spielmodus, Ort oder Ereignis?
+- Wo kommt die Musik in die Handlung — über den Club, über das Radio, über beides?
 
 ## Teil 2 — Trailer
 
