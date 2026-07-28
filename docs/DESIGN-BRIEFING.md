@@ -1,28 +1,41 @@
 # Design-Briefing — Turbo Siesta / Solara Bay
 
 **Für:** den Design-Chat und alle, die Material für diese Welt bauen
-**Stand:** 26.07.2026
+**Stand:** 28.07.2026 — **ersetzt die Fassung vom 26.07. (Look geändert)**
 
-Lies zuerst `WELTENBIBEL.md` (die Welt) und dann dieses Dokument (was konkret
-gebraucht wird). Der Spiel-Aufbau steht in `GDD.md`.
+Lies zuerst `WELTENBIBEL.md` (die Welt), dann `PLOT-UND-SZENEN.md` (Figuren und
+Geschichte), dann dieses Dokument. Fahrzeuge im Detail:
+`AUTOS-SPEZIFIKATION.md`. Der Spiel-Aufbau steht in `GDD.md`.
 
 ---
 
-## Der Look: „Sunset-Pop"
+## Der Look: „Dämmerung nach dem Regen"
 
-Der Vibe eines sonnigen Open-World-Fahrspiels — aber **komplett eigenständig
-umgesetzt**, nie kopiert. Keine Marken, Logos, Fahrzeugformen oder Schriftzüge,
-die an bestehende Spiele erinnern.
+> **Was sich geändert hat:** Die erste Fassung dieses Briefings beschrieb einen
+> hellen Nachmittag in Bonbonfarben. Nach Sichtung des Bildmaterials des CEO ist
+> das überholt. Die Welt ist **dunkel, nass und spiegelnd** — Kino-Dämmerung
+> statt Cartoon-Nachmittag. Wer nach der alten Fassung baut, baut am Ziel vorbei.
 
-**Die drei Regeln, die den Stil ausmachen:**
+Referenz ist das Material des CEO im Drive-Ordner: nasse, spiegelnde Straßen,
+Magenta-Himmel, silhouettierte Palmen, warme Fensterlichter, dunkle Sportwagen
+mit Reflexionen. Eigenständig umgesetzt, nie kopiert — keine Marken, Logos oder
+Fahrzeugformen, die an bestehende Spiele erinnern.
 
-1. **Ewige Golden Hour.** Die Sonne steht immer knapp über dem Horizont. Alles
-   wirft lange, weiche Schatten in *eine* Richtung. Kein Mittag, keine Nacht.
-2. **Asphalt ist lila, nicht grau.** Der wichtigste Trick des Stils: Die Straße
-   nimmt das Abendlicht auf. Grau würde die ganze Welt tot machen.
-3. **Flache, klare Formen mit satten Farben.** Bonbonfarben statt Realismus,
-   lesbare Silhouetten statt Detailtreue. Es soll auf einem Handybildschirm in
-   einer Zehntelsekunde erkennbar sein.
+**Die vier Regeln, die den Stil ausmachen:**
+
+1. **Keine Tagszenen.** Die Welt spielt in Dämmerung, Nacht und Regen. Nie Mittag,
+   nie Sonnenschein.
+2. **Nasser, spiegelnder Asphalt.** Der wichtigste Effekt überhaupt: Die Straße
+   spiegelt Neon, Scheinwerfer und Himmel. Trockener Asphalt macht die Welt tot.
+3. **Magenta oben, Türkis in den Schatten.** Der Himmel brennt, die Schatten sind
+   kalt. Dazwischen warme Punktlichter aus Fenstern und Schildern.
+4. **Silhouetten statt Details.** Palmen, Masten, Figuren stehen als dunkle Formen
+   gegen den hellen Himmel. Auf einem Handybildschirm zählt die Silhouette, nicht
+   die Textur.
+
+**Die Palette bleibt** — sie ist dieselbe wie vorher, nur nach Sonnenuntergang.
+Magenta, Türkis und warmes Gelb waren schon da; sie werden jetzt abgedunkelt und
+gegen tiefe Schatten gesetzt. Nichts muss neu erfunden werden.
 
 ### Palette
 
@@ -46,16 +59,29 @@ Seite, die Polizei macht ein Knöllchen-Selfie statt einer Verhaftung.
 
 ---
 
-## Die Welt: Solara Bay
+## Die Figuren
 
-Küstenstadt, vier Distrikte:
-
-| Distrikt | Charakter |
+| Figur | Beschreibung |
 |---|---|
-| **La Promenada** | Strandmeile, Influencer, weite Kurven |
-| **Mercado Viejo** | Enge Marktgassen, beste Abkürzungen, höchstes Risiko |
-| **Marina Bling** | Yachthafen, Neureiche, die fetten Aufträge |
-| **Colina Vista** | Serpentinen zu den Villen, Golden-Hour-Aussichtspunkte |
+| **JESTER** | Hauptfigur. Schwarzhaarig, tätowiert. Die Fahrerin, die niemand kennt — anfangs nur schemenhaft sichtbar |
+| **Die Doppelgängerin** | Sieht Jester zum Verwechseln ähnlich. Erzählmotor der Geschichte |
+| **TANGO** | Von Anfang an bekannt, fährt die Rennen sichtbar |
+| **LUCY SWEET SUIT** | Ebenfalls bekannt, fährt ebenfalls |
+| **Die Verfolger** | Keine Uniform, aber einheitliche Jacken. Fahren bei den Rennen selbst mit |
+
+## Die Welten
+
+| Welt | Charakter |
+|---|---|
+| **Lost District** | Wo Jester lebt und ihr Top-Auto steht. Dunkel, verfallen, magenta |
+| **Casino** | Schaufenster der Szene, davor stehen immer die Top-Autos. Glänzend |
+| **Car Race** | Nachts, inoffiziell. Wo entschieden wird, wer zählt |
+| **Live & Class** | Der **Dance Club** — hier ist Jester DJ. Licht, Menge, Musik |
+| **Rain City** | Die Verfolger. Das fotorealistischste Register: Regen, Scheinwerfer |
+| **Limited Time Drive** | Zeitlich begrenzte Fahrten — noch zu klären |
+
+Die Spieldistrikte (La Promenada, Mercado Viejo, Marina Bling, Colina Vista)
+bleiben als Stadtstruktur bestehen und nehmen diese Welten auf.
 
 Fiktive Marken der Welt (parodistisch, keine realen Vorbilder erkennbar):
 Möbelhaus **BJÖRNSTAD**, Saftkette **Kale Force One**, Liefer-App **¡Pronto!**,
@@ -83,11 +109,13 @@ ein einfacher Kasten und damit die größte Schwachstelle.
 - Die **¡Pronto!-Plaza** als Startpunkt und die **Waschanlage** als
   Wiedererkennungsort — beides sind zentrale Spielorte
 
-### Vorrang 3 — Die Figur
+### Vorrang 3 — Die Figuren
 
-Der Künstler, der zugleich Hauptfigur ist. Aussehen, Kleidung, Wiedererkennung
-über alle Kanäle (Spiel, Video, Social). **Noch nicht entschieden** — siehe
-offene Punkte in der Weltenbibel.
+**Jester** zuerst: schwarzhaarig, tätowiert, im Spiel als Avatar und Fahrerin
+erkennbar. Wichtig ist die **Silhouette** — sie muss auch dann wiedererkennbar
+sein, wenn man sie nur schemenhaft sieht, denn genau das ist ihr Erzählmotiv.
+Danach die Verfolger (einheitliche Jacke, keine Uniform), dann Tango und
+Lucy Sweet Suit.
 
 ### Bereits fertig, als Stilreferenz nutzbar
 
@@ -115,7 +143,8 @@ Originalauflösung.
 
 ## Was den Stil kaputt macht
 
-- Grauer Asphalt
+- Trockener, grauer Asphalt — der Nass-Effekt trägt den ganzen Look
+- Tageslicht, blauer Himmel, Sonnenschein
 - Realistische Fahrzeug- oder Häuserproportionen
 - Alles, was an bestehende Spielemarken erinnert — Namen, Logos, Wagenformen
 - Gewaltdarstellung, Waffen, Blut
