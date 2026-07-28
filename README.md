@@ -42,6 +42,9 @@ App-Store-Release: siehe [`docs/IOS-APP-STORE.md`](docs/IOS-APP-STORE.md).
 |---|---|
 | `game/` | Das komplette Web-Spiel (5 Dateien + Icons, keine Dependencies) |
 | `roblox/` | **Roblox-Portierung**: fertige Place-Datei + Luau-Quellen + Publish-Anleitung |
+| `roblox-mcp/` | MCP-Server für Roblox-APIs (21 Werkzeuge: öffentlich + Open Cloud v2) |
+| `roblox-game-kit/` | Luau-Baukasten: CarBuilder, BuildingBuilder, ShopKit, DesignPresets |
+| `business/` | Backlog, Business Case, Finanzen, Messwerte, Prüflisten, Briefings |
 | `docs/GDD.md` | Game Design Document |
 | `docs/BERICHT-PHASE-*.md` | Projektberichte: Konzeption, Entwicklung, Web-Marketing, Roblox |
 | `docs/IOS-APP-STORE.md` | Capacitor-Anleitung für den App-Store-Release |

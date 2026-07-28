@@ -64,6 +64,36 @@ Feste Aufteilung, damit nichts doppelt läuft:
 - Der Browser kann keine lokale Session öffnen. Studio-Arbeit geht deshalb
   ausschließlich über die Desktop-App oder das Terminal.
 
+## Wie Chats zusammenarbeiten
+
+**Es gibt keine Chat-zu-Chat-Verbindung.** Keine Funktion leitet eine
+Unterhaltung in eine andere. Koordiniert wird ausschließlich über gemeinsame
+Ablagen. Geprüft am 26.07.2026, alle fünf funktionieren:
+
+| Brücke | Wofür | Zugang |
+|---|---|---|
+| **Git-Repo** | Code, Texte, Spezifikationen, Zustand | jede Session |
+| **Google Drive** | Bilder, Videos, 3D-Dateien, alles Binäre | Cloud-Session liest und schreibt |
+| **claude.ai/design** (Werkzeug `DesignSync`) | Design-Systeme, UI-Komponenten, HTML-Vorschauen | Cloud-Session liest und schreibt |
+| **Figma** | Layouts, Assets in Originalqualität | Cloud-Session liest |
+| **Artifacts** | veröffentlichte Seiten | Cloud-Session liest und schreibt |
+
+Zusätzlich innerhalb von claude.ai: **Projects** bündeln mehrere Chats mit
+gemeinsamen Wissensdateien und Projektgedächtnis. Das verbindet claude.ai-Chats
+untereinander, aber nicht mit einer Code-Session.
+
+**Rollenverteilung, damit nichts doppelt läuft:**
+
+- **Diese Cloud-Session ist das PMO** — führt als Einzige den Backlog, plant,
+  baut, misst. Alle anderen liefern zu.
+- **Der Design-Chat** liefert Bildwelt und Modelle nach Google Drive. Sein
+  Auftrag steht in `docs/DESIGN-BRIEFING.md` und `docs/AUTOS-SPEZIFIKATION.md`.
+- **Die lokale Session** führt Studio-Züge aus und committet ins Repo. Ihr
+  Auftrag steht in `business/BRIEFING-LOKAL.md`.
+
+Zwei Chats, die beide planen, erzeugen zwei Backlogs. Genau das ist der Fehler,
+den diese Aufteilung verhindert.
+
 ## Arbeitsteilung Cloud ↔ lokal
 
 Das ist keine Vorliebe, sondern eine technische Grenze:
