@@ -108,6 +108,31 @@ jemand die Regeln im Kopf haben muss.
 
 ---
 
+## Die Begriffe in Claude Design (bestätigt vom Design-Chat, 28.07.2026)
+
+| Begriff | Was es ist | Inhalt |
+|---|---|---|
+| **Projekt** | Der Arbeitsraum. Chat, Dateien, Deliverables zu einem Vorhaben | Konkrete Artefakte: dieses Deck, dieser Prototyp |
+| **Designsystem** | Ein Projekt, das anderen Projekten **als visuelle Referenz angehängt** wird | Farben, Typografie, Spacing, Komponenten, Assets — **nur Stil, keine Inhalte** |
+| **Template** | Wiederverwendbare Vorlage für ein **Format** | Fertige Struktur plus Platzhalter |
+
+In einem Satz: **Designsystem = wie es aussieht. Template = wie es aufgebaut ist.
+Projekt = was konkret entsteht.**
+
+**Die zwei Regeln, die daraus folgen:**
+
+1. **Ein Designsystem pro Marke oder Welt** — nicht pro Farbvariante. Varianten
+   gehören als Themes bzw. Token-Sets **hinein**, nicht daneben.
+2. **Templates liegen im Designsystem**, nicht in den Projekten — dann erben sie
+   die Tokens automatisch. Projekte sind nur noch die echten Deliverables, mit
+   angehängtem Designsystem.
+
+**Anti-Pattern, ausdrücklich benannt:** Stil direkt im Projekt entwickeln. Er ist
+dann nicht wiederverwendbar und driftet mit jedem neuen Projekt auseinander.
+
+Das deckt sich mit dem Token-Ansatz oben: Was hier „Themes und Token-Sets" heißt,
+ist genau die DTCG-Struktur — eine Quelle, mehrere Ausprägungen.
+
 ## Wo das System lebt
 
 Das passt genau auf die Brücken, die bereits geprüft sind:
