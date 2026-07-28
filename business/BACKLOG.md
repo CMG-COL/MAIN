@@ -26,6 +26,7 @@ diese ersten Wellen. Erst gut machen, dann öffnen.
 | 9 | P | **Zivilverkehr + Feder-Stoßstange** (Parität zur Web-Fassung) | Session-Zeit ↑ | offen |
 | 10 | M | **Kosmetik-Pass „Lackierungen"** (49–99 R$) via ShopKit einbauen | Zahlerquote in % | blockiert bis Haltequoten ok |
 | 11 | P | **Club-Zone** (8e) mit eigenem Track, Licht, Tanz-Emotes | Session-Zeit ↑ | nach Livegang |
+| 12 | — | **Repo/Branch auf GAM-Namenskonvention umbenennen** (CEO 28.07.: ausdrücklich NICHT vorher) | Konvention erfüllt | blockiert bis Meilenstein 1 |
 
 ### Musik-Strategie — drei Wege, in dieser Reihenfolge prüfen
 

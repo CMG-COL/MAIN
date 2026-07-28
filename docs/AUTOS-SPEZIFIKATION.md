@@ -109,7 +109,8 @@ Geometrie gedacht, auf der Spieler laufen.
 
 ### Export aus Blender
 
-- Format **`.fbx`** oder **`.gltf`**
+- Format **`.glb`** oder **`.gltf`** (`.fbx` geht auch, kann der Design-Chat
+  aber nicht erzeugen — siehe Teil 4)
 - Maßstab: 1 Blender-Einheit = 1 Stud. Ein Sportwagen ist etwa **6 Studs breit,
   11 lang, 4 hoch**
 - Nullpunkt in der **Mitte der Bodenfläche**, Nase zeigt **−Z**
@@ -143,11 +144,20 @@ Design-Entscheidung mit Kosten, deshalb bewusst treffen.
 
 ## Teil 4 — Was der Design-Chat liefern soll
 
+**Abgestimmt mit dem Design-Chat am 28.07.2026:** Er liefert `.glb` (oder
+OBJ+MTL) plus optional eine **Luau-Bauanleitung** (Skript, das das Fahrzeug aus
+Parts/Meshes mit exakten Palettenfarben aufbaut — für Low-Part-Fahrzeuge oft der
+sauberere Weg als ein Mesh-Import). Kein `.rbxm`, kein `.fbx`. PBR-Maps kann er
+**prozedural** erzeugen (Streifen, Lackflächen, Fensterraster), keine
+fotografischen oder gemalten Texturen. Konvertierung und Studio-Import
+übernimmt die lokale Session.
+
 **Pro Fahrzeug ein Ordner** mit:
 
 ```
 auto-jester-held/
-  auto-jester-held.fbx        (oder .gltf)
+  auto-jester-held.glb        (oder OBJ+MTL)
+  bauanleitung.luau           optional, siehe oben
   color.png                   1024x1024
   normal.png                  1024x1024
   roughness.png               1024x1024

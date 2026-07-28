@@ -131,7 +131,9 @@ Spiel aussehen *soll* — die 3D-Umsetzung muss dorthin aufschließen.
 - Zielgerät ist das **Handy**. Sparsame Geometrie, wenige Teile pro Objekt,
   keine unnötigen Details. Ein flüssiges einfaches Modell schlägt ein
   ruckelndes schönes.
-- Modelle als `.rbxm` oder als Luau-Bauanleitung. Beides brauchbar.
+- Modelle als `.glb`/`.gltf` (oder OBJ+MTL) oder als Luau-Bauanleitung. Beides
+  brauchbar. `.rbxm` und `.fbx` kann der Design-Chat nicht erzeugen — die
+  Konvertierung für Studio übernimmt die lokale Session.
 - Materialien: Roblox-Standardmaterialien reichen. Neon sparsam einsetzen —
   es ist im Sunset-Pop der Akzent, nicht die Grundfarbe.
 - Farben exakt aus der Palette oben, damit alles zusammenpasst.
@@ -154,9 +156,10 @@ Originalauflösung.
 
 ## Wo die Ergebnisse hin sollen
 
-In den Sammelordner, den Chris angelegt hat. Dateien gern mit sprechenden Namen
-(`auto-spieler-v1.rbxm`, `gebaeude-villa-01.rbxm`). Eine kurze Notiz dazu, was es
-ist und wofür gedacht, spart später Rückfragen.
+In den Sammelordner, den Chris angelegt hat — der Design-Chat kann dort selbst
+schreiben. Dateien gern mit sprechenden Namen (`auto-spieler-v1.glb`,
+`gebaeude-villa-01.glb`). Eine kurze Notiz dazu, was es ist und wofür gedacht,
+spart später Rückfragen.
 
 **Und die Regel gilt auch hier: Nichts wird veröffentlicht, bevor Chris es
 freigibt.** Auch keine Vorschauen, keine Moodboards auf Social.

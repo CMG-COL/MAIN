@@ -152,6 +152,21 @@ mindestens einmal in Studio gelaufen ist.
    Assets von GTA/Rockstar oder anderen Spielen — auch nicht als Store-Tags.
 5. **Ehrliche Statusmeldungen.** Ungetestet heißt ungetestet.
 
+## Doku- und Reporting-Regeln (CEO-Anweisung, 28.07.2026)
+
+Diese Regeln gelten für **jede** Session und werden nicht situativ ausgelegt.
+Chris kontrolliert das nicht immer — die Einhaltung liegt bei Claude:
+
+1. **Lauf- und Meilenstein-Doku ausschließlich im Run-Sheet** (Markdown) im
+   dafür vorgesehenen Google-Drive-Ordner fortschreiben. Nirgendwo sonst.
+2. **Kein Reporting nach Todoist.** Todoist wird nur angefasst, wenn ein
+   Backlog-Task **entsteht** oder **abgeschlossen** wird — sonst nie.
+3. **Repo-/Branch-Umbenennung auf GAM-Konvention: erst nach Meilenstein 1.**
+   Steht als eigener Punkt im Backlog; vorher wird nichts umbenannt.
+
+Vor jedem Zug-Abschluss kurz gegen diese drei Punkte prüfen, bevor irgendetwas
+dokumentiert oder benannt wird.
+
 ## Offene Blocker
 
 - Roblox aus der Cloud-Session nicht erreichbar → Publishing und Store-Pflege
