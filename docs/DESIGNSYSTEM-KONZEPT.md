@@ -124,6 +124,14 @@ Datenkanal für 3D-Modelle, sondern als *Schaufenster* — du blätterst auf
 claude.ai/design durch Farben, HUD-Bausteine, Fahrzeugklassen und siehst, ob es
 zusammenpasst. Gebaut wird weiter aus dem Repo.
 
+> **Merkposten (CEO, 28.07.2026):** Claude Design kann **jeden MCP aus dem
+> claude.ai-Konto** nutzen. Damit hat der Design-Chat dieselben Connectors wie
+> diese Session — Google Drive, Figma, Canva und weitere. Praktische Folge: Kein
+> Umweg über Chris als Boten. Der Design-Chat kann direkt in dieselben Ablagen
+> schreiben, aus denen ich lese; laut Produktdoku kann Claude Design außerdem
+> **Repos verknüpfen** und damit Spezifikationen live lesen statt als Kopie.
+> Beim Aufsetzen des Design-Kreislaufs berücksichtigen.
+
 ---
 
 ## Was ich vorschlage zu tun
