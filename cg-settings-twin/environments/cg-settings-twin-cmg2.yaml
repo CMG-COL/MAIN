@@ -1,0 +1,5 @@
+# Self-hosted: the worker runs on CMG2, so settings files never leave the machine.
+# One environment per machine: a session goes to whichever worker polls its environment,
+# so CMG1 and CMG3 each get their own copy of this file later.
+name: cg-settings-twin-cmg2
+config: {type: self_hosted}
